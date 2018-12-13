@@ -1,0 +1,142 @@
+@import 'bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.scss';
+
+// ----------------------------- variables -----------------------------
+$primary-color: rgb(106, 91, 75);
+
+// ----------------------------- fonts -----------------------------
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+      url('../fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'lato-light';
+    src: url('../fonts/lato-light-webfont.woff2') format('woff2'),
+        url('../fonts/lato-light-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+        url('../fonts/lato-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dancing-script';
+    src: url('../fonts/dancingscript-bold-webfont.woff2') format('woff2'),
+        url('../fonts/dancingscript-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+$font-regular: "lato-regular";
+$font-light: "lato-light";
+$font-bold: "lato-bold";
+$font-handdrawn: "dancing-script";
+
+// ----------------------------- transition -----------------------------
+$fast-transition: all 0.2s ease-in-out;
+$slow-transition: all 0.8s ease-in-out;
+.move {
+	transition-timing-function: ease-in-out;
+	animation-fill-mode: both;
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 0.8s; }
+.delay-9 { animation-delay: 0.9s; }
+.delay-10 { animation-delay: 0.10s; }
+.duration-05 { animation-duration: 0.5s; }
+.duration-10 { animation-duration: 1.0s; }
+.duration-15 { animation-duration: 1.5s; }
+.duration-20 { animation-duration: 2.0s; }
+.duration-25 { animation-duration: 2.5s; }
+.duration-30 { animation-duration: 3.0s; }
+.duration-35 { animation-duration: 3.5s; }
+.duration-40 { animation-duration: 4.0s; }
+.duration-45 { animation-duration: 4.5s; }
+.duration-50 { animation-duration: 5.0s; }
+
+@keyframes zoomIn {
+  0% { transform: scale(2); }
+  100% { transform: scale(1); }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.fadeIn { animation-name: fadeIn; }
+.fadeInDown { animation-name: fadeInDown; }
+.fadeInUp { animation-name: fadeInUp; }
+.zoomIn { animation-name: zoomIn; }
+
+
+body{
+	margin: 0 auto;
+}
+
+.home{
+  background: url('../img/background.jfif');
+	height: 100vh;
+	background-size: cover;
+  background-position: center;
+  text-align: center;
+	/*NAVBAR*/
+	.navbar-default{
+		background-color: transparent;
+		border-color: transparent;
+		.navbar-nav{
+      float: right;
+      a{
+        color: $primary-color;
+        font-family: $font-light;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+		}
+  }
+  .content-title{
+    h1,h2{
+      color: $primary-color;
+      margin: 0;
+    }
+    h1{
+      font-family: $font-handdrawn;
+      font-size: 100px;
+    }
+    h2{
+      font-family: $font-light;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+}
