@@ -7752,6 +7752,17 @@ button:focus {
   min-height: 100vh;
   /*NAVBAR*/
 }
+.home .logo {
+  background-image: url("../img/logo.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 12px;
+}
 .home .navbar-default {
   background-color: transparent;
   border-color: transparent;
@@ -7769,6 +7780,10 @@ button:focus {
   font-size: 20px;
 }
 @media (max-width: 768px) {
+  .home .logo {
+    height: 30px;
+    width: 30px;
+  }
   .home .navbar-header {
     background-color: #ffffff;
   }
