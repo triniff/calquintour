@@ -1,4 +1,5 @@
 @import 'bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.scss';
+@import '_slider.scss';
 
 // ----------------------------- variables -----------------------------
 $primary-color: rgb(106, 91, 75);
@@ -32,10 +33,18 @@ $primary-color: rgb(106, 91, 75);
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+  font-family: 'playfairdisplay-bold';
+  src: url('../fonts/playfairdisplay-black-webfont.woff2') format('woff2'),
+      url('../fonts/playfairdisplay-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 $font-regular: "lato-regular";
 $font-light: "lato-light";
 $font-bold: "lato-bold";
 $font-handdrawn: "dancing-script";
+$font-serif: "playfairdisplay-bold";
 
 // ----------------------------- transition -----------------------------
 $fast-transition: all 0.2s ease-in-out;
@@ -102,13 +111,27 @@ $slow-transition: all 0.8s ease-in-out;
 body{
 	margin: 0 auto;
 }
-
-.home{
+h1,h2{
+  color: $primary-color;
+  margin: 0;
+}
+h1{
+  font-family: $font-handdrawn;
+  font-size: 100px;
+}
+h2{
+  font-family: $font-light;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.background-content{
   background: url('../img/background.jfif');
-	height: 100vh;
 	background-size: cover;
   background-position: center;
   text-align: center;
+}
+.home{
+  min-height: 100vh;
 	/*NAVBAR*/
 	.navbar-default{
 		background-color: transparent;
@@ -124,19 +147,48 @@ body{
 		}
   }
   .content-title{
-    h1,h2{
-      color: $primary-color;
-      margin: 0;
-    }
-    h1{
-      font-family: $font-handdrawn;
-      font-size: 100px;
-    }
+    margin-top: 15%;
+  }
+}
+
+.nosotros{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  .content-box{
+    background-color: #ffffff;
+    padding: 40px;
+    width: 38%;
+    height: 40%;
     h2{
+      margin-bottom: 24px;
+      font-family: "Playfair Display", serif;
+      font-size: 44px;
+      line-height: 45px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      text-transform: inherit;
+      opacity: 1;
+      
+    }
+    h2, p{text-align: left;}
+    p{
       font-family: $font-light;
-      font-size: 20px;
-      text-transform: uppercase;
+      color: $primary-color;
+      font-size: 16px;
     }
   }
+}
 
+.wine-tours{
+  height: 100vh;
+  .carousel-item__title{
+    color: $primary-color;
+  }
+  .carousel-item__description{
+    color: $primary-color;
+    font-family: $font-light;
+    font-size: 16px;
+  }
 }
