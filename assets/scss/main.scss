@@ -170,7 +170,6 @@ h2{
       font-weight: bold;
       text-transform: inherit;
       opacity: 1;
-      
     }
     h2, p{text-align: left;}
     p{
@@ -190,5 +189,59 @@ h2{
     color: $primary-color;
     font-family: $font-light;
     font-size: 16px;
+  }
+}
+
+.contacto{
+  background-color: #fcf8e3;
+  margin: 0;
+  width: 100%;
+  padding: 40px !important;
+  h3{
+    margin-bottom: 38px;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: inherit;
+    opacity: 1;
+    color: $primary-color;
+  }
+  h5{
+    margin: 24px 0;
+    color: $primary-color;
+    font-family: $font-light;
+    font-size: 18px;
+  }
+  .form-check{
+    display: flex;
+    justify-content: flex-end;
+    border: transparent;
+    label{
+      font-family: $font-light;
+      font-size: 16px;
+      color: $primary-color;
+      font-weight: normal;
+      margin-left: 8px;
+    }
+    .material-icons{
+      color: #92C820 !important;
+      margin-left: 20px;
+      &:hover{
+        color: rgb(115, 158, 21) !important;
+      }
+    }
+  }
+  .btn-primary{
+    background-color: #92C820;
+    border-color: #92C820;
+    float: right;
+    width: 120px;
+    border-radius: 20px;
+    &:active{
+      background-color: rgb(115, 158, 21);
+      border-color: rgb(115, 158, 21);
+    }
   }
 }
