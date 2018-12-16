@@ -7355,6 +7355,16 @@ td.visible-print {
   padding: 0 40px;
   width: 40%;
 }
+@media (max-width: 1120px) {
+  .carousel-item__info {
+    width: 70%;
+  }
+}
+@media (max-width: 1120px) and (max-width: 800px) {
+  .carousel-item__info {
+    width: 100%;
+  }
+}
 
 .carousel-item__image {
   width: 60%;
@@ -7371,6 +7381,16 @@ td.visible-print {
   position: relative;
   transform: translateX(100%);
   transition: 0.6s all ease-in-out;
+}
+@media (max-width: 1120px) {
+  .carousel-item__image {
+    width: 30%;
+  }
+}
+@media (max-width: 1120px) and (max-width: 800px) {
+  .carousel-item__image {
+    display: none;
+  }
 }
 
 .carousel-item__subtitle {
@@ -7718,6 +7738,21 @@ h2 {
   font-size: 16px;
   text-transform: uppercase;
 }
+.home .navbar-default .navbar-nav a i {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .home .navbar-header {
+    background-color: #ffffff;
+  }
+  .home .navbar-collapse {
+    background-color: #ffffff;
+    border-bottom-color: #6a5b4b;
+  }
+  .home .navbar-nav {
+    float: inherit !important;
+  }
+}
 .home .content-title {
   margin-top: 15%;
 }
@@ -7751,6 +7786,22 @@ h2 {
   font-family: "lato-light";
   color: #6a5b4b;
   font-size: 16px;
+}
+@media (max-width: 990px) {
+  .nosotros .content-box {
+    width: 60%;
+  }
+}
+@media (max-width: 990px) and (max-width: 600px) {
+  .nosotros .content-box {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .nosotros {
+    min-height: auto;
+    border-bottom: 1px solid #e8e6e6;
+  }
 }
 
 .wine-tours {
@@ -7807,6 +7858,12 @@ h2 {
 .contacto .form-check .material-icons:hover {
   color: #739e15 !important;
 }
+@media (max-width: 1200px) {
+  .contacto .form-check {
+    justify-content: center;
+    margin: 24px 0;
+  }
+}
 .contacto .btn-primary {
   background-color: #92C820;
   border-color: #92C820;
@@ -7814,9 +7871,26 @@ h2 {
   width: 120px;
   border-radius: 20px;
 }
+@media (max-width: 640px) {
+  .contacto .btn-primary {
+    width: 100%;
+    padding: 10px;
+  }
+}
 .contacto .btn-primary:active {
   background-color: #739e15;
   border-color: #739e15;
+}
+
+footer {
+  background-color: #6a5b4b;
+  padding: 8px;
+}
+footer p {
+  color: #ffffff;
+  font-family: "lato-light";
+  text-align: center;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

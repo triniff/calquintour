@@ -143,8 +143,23 @@ h2{
         font-family: $font-light;
         font-size: 16px;
         text-transform: uppercase;
+        i{
+          font-size: 20px;
+        }
       }
-		}
+    }
+  }
+  @media (max-width: 768px) {
+    .navbar-header{
+      background-color: #ffffff;
+    }
+    .navbar-collapse{
+      background-color: #ffffff;
+      border-bottom-color: $primary-color;
+    }
+    .navbar-nav{
+      float: inherit !important;
+    }
   }
   .content-title{
     margin-top: 15%;
@@ -177,6 +192,16 @@ h2{
       color: $primary-color;
       font-size: 16px;
     }
+    @media (max-width: 990px) {
+      width: 60%;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    min-height: auto;
+    border-bottom: 1px solid #e8e6e6;
   }
 }
 
@@ -232,6 +257,10 @@ h2{
         color: rgb(115, 158, 21) !important;
       }
     }
+    @media (max-width: 1200px) {
+      justify-content: center;
+      margin: 24px 0;
+    }
   }
   .btn-primary{
     background-color: #92C820;
@@ -239,9 +268,24 @@ h2{
     float: right;
     width: 120px;
     border-radius: 20px;
+    @media (max-width: 640px) {
+      width: 100%;
+      padding: 10px;
+    }
     &:active{
       background-color: rgb(115, 158, 21);
       border-color: rgb(115, 158, 21);
     }
+  }
+}
+
+footer{
+  background-color: $primary-color; 
+  padding: 8px;
+  p{
+    color: #ffffff;
+    font-family: $font-light;
+    text-align: center;
+    margin: 0;
   }
 }
