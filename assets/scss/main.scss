@@ -273,7 +273,7 @@ button:focus {outline:0;}
     }
   }
   @media (max-width: 480px) {
-    height: 90vh;
+    height: 108vh;
     position: relative;
     overflow: inherit;
     display: block;
@@ -351,12 +351,5 @@ footer{
     font-family: $font-light;
     text-align: center;
     margin: 0;
-  }
-}
-
-@media only screen and (orientation:landscape){
-  body {
-    height: 100vw;
-    transform: rotate(90deg);
   }
 }

@@ -7921,7 +7921,7 @@ button:focus {
 }
 @media (max-width: 480px) {
   .wine-tours {
-    height: 90vh;
+    height: 108vh;
     position: relative;
     overflow: inherit;
     display: block;
@@ -8004,13 +8004,6 @@ footer p {
   font-family: "lato-light";
   text-align: center;
   margin: 0;
-}
-
-@media only screen and (orientation: landscape) {
-  body {
-    height: 100vw;
-    transform: rotate(90deg);
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
