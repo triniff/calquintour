@@ -7482,6 +7482,26 @@ td.visible-print {
   background-image: url("../img/sustentabilidad-background1-1200x771.jpg");
 }
 
+.carousel-item--7 .carousel-item__image {
+  background-image: url("../img/isla-negra-pablo-neruda.jpg");
+}
+
+.carousel-item--8 .carousel-item__image {
+  background-image: url("../img/pexels-photo-370984.jpeg");
+}
+
+.carousel-item--9 .carousel-item__image {
+  background-image: url("../img/pexels-photo-374073.jpeg");
+}
+
+.carousel-item--10 .carousel-item__image {
+  background-image: url("../img/wine-winery-burgundy-rioja-48848.jpeg");
+}
+
+.carousel-item--11 .carousel-item__image {
+  background-image: url("../img/timthumb.jpg");
+}
+
 .carousel-item__btn {
   width: 35%;
   color: #2C2C2C;
@@ -7753,13 +7773,12 @@ button:focus {
   /*NAVBAR*/
 }
 .home .logo {
-  background-image: url("../img/logo.jpg");
+  background-image: url("../img/logo.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  border-radius: 100%;
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   float: left;
   margin: 12px;
 }
@@ -7781,11 +7800,17 @@ button:focus {
 }
 @media (max-width: 768px) {
   .home .logo {
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0;
   }
   .home .navbar-header {
     background-color: #ffffff;
+    display: flex;
+    width: 100%;
+    padding: 14px 0;
+    justify-content: flex-end;
   }
   .home .navbar-collapse {
     background-color: #ffffff;
