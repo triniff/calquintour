@@ -242,38 +242,47 @@
 
 	<div class="contacto container" id="contacto">
 		<h3>Solicita tu Tour</h3>
-		<form>
+		<form action="envia.php" method="post">
 			<div class="personal-info row">			
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input type="text" class="form-control" placeholder="Nombre">
+					<input name="nombre" type="text" class="form-control" placeholder="Nombre" required>
 				</div>
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input type="email" class="form-control" placeholder="Email">
+					<input name="mail" type="email" class="form-control" placeholder="Email" required>
 				</div>
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input type="number" class="form-control" placeholder="Teléfono">
+					<input name="fono" type="text" class="form-control" placeholder="Teléfono" required>
 				</div>
+				
+				
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<select class="form-control">
-						<option>Viña Concha y Toro</option>
-						<option>Viña Undurraga</option>
-						<option>Viña Cousiño Macul</option>
-						<option>Viña Bodegas RE</option>
-						<option>Viña Casas del Bosque</option>
-						<option>Viña Emiliana Organic Wineyard</option>
+					<select class="form-control" required>
+						<option value="1" selected>Viña Concha y Toro</option>
+						<option value="2">Viña Undurraga</option>
+						<option value="3">Viña Cousiño Macul</option>
+						<option value="4">Viña Bodegas RE</option>
+						<option value="5">Viña Casas del Bosque</option>
+						<option value="6">Experiencia Nerudiana</option>
+						<option value="7">Experiencia Vinocratas</option>
+						<option value="8">Experiencia Barra Brava</option>
+						<option value="9">Experiencia Cepas Patrimoniales</option>
+						<option value="10">Experiencia Valles de Chile</option>
 					</select>
 				</div>
 			</div>
 			<h5>Dirección</h5>
 			<div class="address-info row">
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input class="form-control" placeholder="Partida">
+					<input class="form-control" placeholder="Partida" required>
 				</div>
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input class="form-control" placeholder="Llegada">
+					<input class="form-control" placeholder="Llegada" required>
+				</div>
+				<div class="form-group col-xs-12 col-md-6 col-lg-3">
+					<input class="form-control" type="date" name="fecha" min="2018-01-25" max="2040-05-25" step="2" required>
 				</div>
 				<div class="form-check col-xs-12 col-md-12 col-lg-6">
-					<input class="form-check-input" type="checkbox" value="">
+					<input class="form-check-input" type="checkbox" value="" required>
 					<label class="form-check-label" for="checkbox">
 						Condiciones generales de contratación
 					</label>
