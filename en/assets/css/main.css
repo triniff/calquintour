@@ -7778,10 +7778,10 @@ button:focus {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 100px;
-  width: 100px;
-  float: left;
-  margin: 12px;
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 12px auto;
 }
 .home .navbar-default {
   background-color: transparent;
@@ -7800,12 +7800,6 @@ button:focus {
   font-size: 20px;
 }
 @media (max-width: 768px) {
-  .home .logo {
-    height: 60px;
-    width: 60px;
-    position: absolute;
-    left: 0;
-  }
   .home .navbar-header {
     background-color: #ffffff;
     display: flex;
