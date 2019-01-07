@@ -15,28 +15,32 @@
             fclose($f);
         }
        
-	 
+
 	$name = $_POST['nombre'];
 	$mail = $_POST['email'];
-	$phone = $_POST['phone'];
-	$begin = $_POST['partida'];
-    $ending = $_POST['llegada'];
+	$phone = $_POST['fono'];
+	$begin = $_POST['inicio'];
+    $nota = $_POST['nota'];
 	$date = $_POST['fecha'];
     $gente = $_POST['gente'];
-    
 	$tour= $_POST['tour'];
-	$vina=" ";
+	$vina="";
+    
 	  if ($tour==1){
         $vina="Concha y Toro";
+         
       }
 	  if ($tour==2){
         $vina="Emiliana";
+           
       }
 	  if ($tour==3){
         $vina="Undurraga";
+           
       }
 	  if ($tour==4){
         $vina="Cousino Macul";
+          
       }
 	  if ($tour==5){
         $vina="Santa Rita";
@@ -57,29 +61,46 @@
         $vina="Cepas Patrimoniales";
       }
 	  $code="cot" . "00" . $tour . "-" .$contador;
+
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
 $headers .= "From: <web@calquintour.cl>\r\n ";
 	
 	
-	$cuerpo = "Ha recibido una solicitud de Cotizacion \n\n"; 
-	$cuerpo .= "Codigo: " . $code . "\r\n"; 
-    $cuerpo .= "Nombre y apellido: " . $name . "\r\n"; 
-    $cuerpo .= "Email: " . $mail . "\r\n";
-	$cuerpo .= "Telefono: " .  $phone . "\r\n";
-	$cuerpo .= "Partida: " . $begin . "\r\n";
-	$cuerpo .= "Llegada: " . $ending . "\r\n";
-	$cuerpo .= "Tour: " . $vina . "\r\n\n";
-    $cuerpo .= "Personas: " . $gente . "\r\n\n";
-	$cuerpo .= "Fecha: " . $date . "\r\n\n";
-	$cuerpo .= "el cliente espera su pronta respuesta" . "\r\n\n";
+	$cuerpo = "Ha recibido una solicitud de Cotizacion".PHP_EOL; 
+	$cuerpo .= "Codigo: " . $code . PHP_EOL; 
+    $cuerpo .= "Nombre y apellido: " . $name . PHP_EOL; 
+    $cuerpo .= "Email: " . $mail . PHP_EOL;
+	$cuerpo .= "Telefono: " .  $phone . PHP_EO;
+	$cuerpo .= "Partida: " . $inicio . PHP_EOL;
+    $cuerpo .= "tour: " . $vina . PHP_EOL;
+    $cuerpo .= "Personas: " . $gente . '\n';
+    $cuerpo .= "Fecha: " . $date . PHP_EOL;
+	$cuerpo .= "Nota: " . $nota . PHP_EOL;
+	$cuerpo .= "el cliente espera su pronta respuesta en idioma ingles";
 	$asunto ="Solicitud de Cotizacion " . $code;
-	$destinatario = "cotizacion@calquintour.cl";
+	$destinatario = "s.gatica.l@gmail.com";
+	
+	
+
 	
 	
 	
+					  if ( mail($destinatario, $asunto, $cuerpo,$headers) ) {
+       						    header('Refresh: 5; URL=index.html');
+							    print '<script language="JavaScript">'; 
+                                print 'alert("Quote Sent, your answer will be in less than 24 hours.");'; 
+                                print '</script>'; 
+                              
+							
+							} else {
+       						    print '<script language="JavaScript">'; 
+                                print 'alert("Unsuccessful delivery, try again or use our social networks");'; 
+                                print '</script>'; 
+                            
+							 
+							}
 	
-	mail($destinatario, $asunto, $cuerpo, $headers);
-	
-    
+
+exit();
 ?>
