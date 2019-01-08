@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Calquintour</title>
+	<title>Calquin Tour</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet">
@@ -41,8 +41,9 @@
 				<h2 class="move fadeInDown duration-15">Expora y descubre viajes únicos</h2>
 			</div>
 			<div class="language">
-				<button class="spanish"></button>
-				<button class="english"></button>
+				<button onclick="location.href='http://www.calquintour.cl'" class="spanish"></button>
+                
+				<button onclick="location.href='http://www.calquintour.cl/en/index.html'" class="english"></button>
 			</div>
 		</div>
 		<div class="nosotros" id="nosotros">
@@ -252,7 +253,7 @@
 				
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
 					<select class="form-control" required>
-						<option value="1" selected>Viña Concha y Toro</option>
+						<option name="tour" value="1" >Viña Concha y Toro</option>
 						<option value="2">Viña Undurraga</option>
 						<option value="3">Viña Cousiño Macul</option>
 						<option value="4">Viña Bodegas RE</option>
@@ -264,17 +265,32 @@
 						<option value="10">Experiencia Valles de Chile</option>
 					</select>
 				</div>
+               
 			</div>
-			<h5>Dirección</h5>
+			
+             <div class="form-group col-xs-12 col-md-6 col-lg-3">
+					<select name="gente" class="form-control" required>
+						<option value="1">1 persona</option>
+						<option value="2">2 personas</option>
+						<option value="3">3 personas</option>
+						<option value="4">4 personas</option>
+						<option value="5">5 personas</option>
+						<option value="6">6 personas</option>
+						<option value="7">7 personas</option>
+						<option value="8">8 personas</option>
+						<option value="9">9 personas</option>
+						<option value="10">mas personas</option>
+					</select>
+				</div>
 			<div class="address-info row">
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input class="form-control" placeholder="Partida" required>
+					<input name="inicio"class="form-control" placeholder="Partida" required>
 				</div>
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input class="form-control" placeholder="Llegada" required>
+					<input name="nota" class="form-control" placeholder="Notas" required>
 				</div>
 				<div class="form-group col-xs-12 col-md-6 col-lg-3">
-					<input class="form-control" type="date" name="fecha" min="2018-01-25" max="2040-05-25" step="2" required>
+					<input  class="form-control" type="date" name="fecha" min="2018-01-25" max="2040-05-25"  required>
 				</div>
 				<div class="form-check col-xs-12 col-md-12 col-lg-6">
 					<input class="form-check-input" type="checkbox" value="" required>
@@ -284,11 +300,12 @@
 					<i class="material-icons">save_alt</i>
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary">Enviar</button>
+			<button type="submit" class="btn btn-primary">Enviar</button>
 		</form>
 	</div>
 	
 	<footer>
+		<p>contacto@calquintour.cl  /  +56934954888</p>
 		<p>Calquin Tour © 2018 Todos los derechos reservados</p>
 	</footer>
 	<!-- jQuery -->
